@@ -7,8 +7,23 @@
 * Harold Nicolas Saavedra Alvarado
 * Jose Fernando Morantes Florez
 
+## Punto 1
+Para poder implementar el patrón Strategy en este problema lo primero que hicimos fue crear la interfaz AirportTransportStrategy que define el método transport.
+Luego se crean las clases BicycleStrategy, BusStrategy y TaxyStrategy las cuales implementan la interfaz AirportTransportStrategy. Para cada una de las clase se define el comportamiento propio del método transport.
+Por ultimo se crea la clase StrategyChooser con el metodo getTransport el cual se el que recibe un objeto de tipo AirportTransportStrategy y ejecuta su método transport.
+
+Para la lógica de decisión implementada en el main se diseño un flujo simple donde dependiendo del presupuesto y el tiempo se decide que medio de transporte usar.
+
 ## Punto 2
 Con el fin de agregar una nueva franquicia se crearon 5 clases nuevas, 1 que corresponde a la franquicia como tal heredando de la clase "PizzaStore" y 4 clases correspondientes a las recetas que se venderan en este punto, todas ellas heredando de la clase "Pizza" , adicional a esto se hicieron los cambios pertinentes en la clase "DependentPizzaStore" y "PizzaTestDrive", en esta ultima se realizo una prueba de funcionamiento de cada una de las clases agregadas.
+
+## Punto 3
+Para la implementacion del Builder pattern el cual se encarga de simplificar la creación de objetos, elegimos la situación en donde queremos implementar una clase que almacene los productos de un supermercado.
+Siguiendo la definición del patrón Builder se definió la interfaz IBuilder que seria la que implementa el método build.
+En la clase Product se definieron todos los atributos y los métodos get y set correspondientes.
+Luego se creo la clase ProductBuilder la cual implementa la interfaz IBuilder, aquí se implementan los métodos que reciben cada parámetro junto con el método build, que es el que se encargara de crear el nuevo objeto a partir de los parámetros que se recibió  anteriormente.
+Por ultimo creamos un ejemplo de prueba donde a partir de la instancia builder de la clase ProductBuilder se crea el objeto product de la clase Product, con los parámetros que recibe builder.  
+
 
 ## Punto 4
 ### Spaghetti Code
